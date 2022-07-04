@@ -21,7 +21,7 @@ navigate("/login")
 
       <div>
         {/* Link button to /login page, if the user is not authenticated, else don't show it*/}
-        <button data-cy="navbar-login-button" onClick={handle}>{auth?"LOGOUT":"LOGIN"}</button>
+        {!auth?  <button data-cy="navbar-login-button" onClick={handle}>LOGIN</button>:""}
       </div>
     </div>
   );
