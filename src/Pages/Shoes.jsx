@@ -29,7 +29,7 @@ const Shoes = () => {
           // _order: sortBy,
         },
       };
-      console.log(getBooksParams.params.category.length,"hello")
+    if(getBooksParams.params.category)
   dispatch(getshoes(getBooksParams));
 
 

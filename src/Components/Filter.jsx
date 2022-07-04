@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-//import { getshoes } from "../Redux/AppReducer/action";
+import { getshoes } from "../Redux/AppReducer/action";
 const Filter = () => {
   // DO NOT CHANGE THE ORDER of the category filters: ie. Sneakers, Loafers, Canvas, Boots
   //in the UI
@@ -34,7 +34,7 @@ const Filter = () => {
       category && (params.category = category);
      
       setSearchParams(params);
-     // dispatch(getshoes({ params: { category } }));
+      dispatch(getshoes({ params: { category } }));
      
     }
   }, [category, searchParams, dispatch,setSearchParams]);
